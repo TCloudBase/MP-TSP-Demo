@@ -1,0 +1,10 @@
+{
+  "envId": "env-sjnruhqp",
+  "functionRoot": "./cloudfunctions",
+  "functions": [
+    {
+      "name": "component_server",
+      "timeout": 20
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<view wx:if="{{title==''||title==null}}" class="loading">信息加载中…</view>
+<block wx:if="{{title!=null&&title!=''}}">
+	<image class="back-image" mode="aspectFill" src="./backimage.jpg"></image>
+	<image class="logo" src="{{logo}}"></image>
+	<view class="title">{{title}}</view>
+	<text class="des">{{des}}</text>
+	<button wx:if="{{!flag}}" 
+		class="detail-button" type="primary"
+          open-type="getUserInfo"
+          disabled="{{loading}}"
+          bindgetuserinfo="bind">{{loading?'加载中':'联系企业'}}</button>
+  	<button wx:else class="detail-button" type="primary" open-type="contact">发送消息</button>
+</block>

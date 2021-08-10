@@ -1,0 +1,475 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    background-color: #f0f2f5;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* 登录框 */
+
+.login_model{
+    max-width: 368px;
+    width: 100%;
+    background-color: #ffffff;
+    margin:auto;
+    padding: 64px 24px;
+}
+.top_logo{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    display: flex;
+}
+.top_logo img{
+    height: 44px;
+    margin: auto 16px auto auto;
+}
+.top_logo div{
+    color: hsla(0, 0%, 0%, 0.85);
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 44px;
+    font-family: Avenir,"Helvetica Neue",Arial,Helvetica,sans-serif;
+    margin-right: auto;
+}
+.des_title{
+    margin-top: 12px;
+    color: rgba(0,0,0,.45);
+    font-size: 14px;
+    text-align: center;
+}
+.login_btn{
+    background: #0052d9 !important;
+    border-color: #0052d9 !important;
+    width: 100%;
+    border-radius: 3px !important;
+    margin-top: 2.5rem!important;
+}
+
+/* 主要页面 */
+
+.main_model{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.main_top{
+    background: linear-gradient(90deg,#262f3e,#536976);
+    height: 44px;
+    width: calc(100% - 40px);
+    display: flex;
+    padding: 10px 20px;
+}
+.main_top h1{
+    color: #ffffff;
+    font-size: 18px;
+}
+.outlogin_btn{
+    height: 36px !important;
+    padding: 5px 20px !important;
+    margin: auto 0 auto auto !important;
+}
+.main_content{
+    display:flex;
+    display: flex;
+    height: calc(100% - 66px);
+}
+.content_left{
+    width: 35%;
+    max-width: 450px;
+    min-width: 320px;
+    height: 100%;
+}
+.nodata_view{
+    margin: auto;
+    width: 100%;
+    max-width: 680px;
+}
+.content_center{
+    width: 100%;
+    padding: 0 !important;
+    border-left-width: 0 !important;
+}
+.content_center .el-card__body {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+/* 消息列表 */
+
+.list_menu{
+    max-width: 240px;
+    min-width: 120px;
+    overflow: hidden;
+    height: 100%;
+    width: 20%;
+}
+.el-menu-item{
+    border-bottom: 1px dashed #EBEEF5;
+}
+.el-menu-item img{
+    margin-right: 5px;
+    width: 35px;
+}
+.chat_view{
+    width: 100%;
+    border-top-width: 0 !important;
+    border-left-width: 0 !important;
+}
+.clearfix{
+    display: flex;
+}
+.clearfix span{
+    margin-right: auto;
+}
+.clearfix .el-button{
+    display:none;
+}
+
+/* 消息详情栏 */
+
+.el-icon-back{
+    line-height: 21px;
+    font-size: 21px;
+    margin-right: 10px;
+}
+.el-icon-back:hover{
+    color: #0052d9;
+}
+
+/* 授权集合 */
+
+.auth_lists{
+    margin-bottom: 100px;
+}
+.auth_title{
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.auth_item{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.auth_item_title{
+    font-size: 15px;
+    line-height: 28px;
+}
+.auth_item_des{
+    font-size: 12px;
+    color: #9a9a9a;
+}
+
+/* 信息填写 */
+
+.mess_info{
+    border-bottom: 1px solid #EBEEF5;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.mess_info_name{
+    font-size: 14px;
+    color: #606266;
+    line-height: 40px;
+}
+.mess_info button{
+    margin-top: 13px;
+    border-radius: 3px;
+    width: 100%;
+}
+.uploader{
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+}
+.uploader:hover{
+    border: 1px dashed #409EFF;
+}
+.uploader label{
+    font-size: 28px;
+    color: #8c939d;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+.uploader label:hover{
+    color: #409EFF;
+}
+.content_left .el-card__body{
+    height: 100%;
+    -ms-overflow-style: none;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+}
+.content_left .el-card__body::-webkit-scrollbar {
+    width: 0 !important
+}
+.clearfix .el-icon-back{
+    display: none;
+}
+
+/* 消息详情 */
+
+.chat_view{
+    height: 100%;
+    width: 100%;
+    border-right-width: 0px !important;
+}
+.chat_view .el-card__body{
+    flex-direction: column;
+}
+.chat_list{
+    padding: 0 15px;
+    padding-top: 20px;
+    height: calc(100% - 333px);
+    width: calc(100% - 30px);
+    background-color: #f5f5f5;
+    -ms-overflow-style: none;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+}
+.chat_list::-webkit-scrollbar {
+    width: 0 !important
+}
+.chat_item_left{
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+}
+.chat_item{
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    position: relative;
+}
+.chat_item img{
+    width: 35px;
+    height: 35px;
+}
+.chat_item div{
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    padding: 8px 15px;
+    padding-right: 18px;
+    vertical-align: middle;
+    word-break: break-all;
+    cursor: default;
+    max-width: 420px;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    background-color: #fff;
+    max-width: 400px;
+}
+.chat_item div:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    left: -5px;
+    top: 13px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: 1px solid #dcdcdc;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+.chat_right div{
+    background-color: #b1e37c;
+    border-color: #b1e37c;
+    text-align: left;
+    text-align: left!important;
+    color: #000;
+    padding-right: 15px;
+    padding-left: 18px;
+    margin-right: 51px;
+    margin-left: auto;
+}
+.chat_right img{
+    position: absolute;
+    top: 0;
+    right: 0;    
+}
+.chat_right div:before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #b1e37c;
+    right: -5px;
+    left: auto;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: 1px solid #b1e37c;
+}
+.chat_image{
+    margin: 0 10px;
+    width: auto !important;
+    height: auto !important;
+    max-width: 230px;
+    max-height: 130px;
+}
+.chat_input{
+    height: 200px;
+}
+.chat_input .el-textarea__inner{
+    height: 100% !important;
+    border: none !important;
+    border-top: 1px solid #DCDFE6 !important;
+    border-radius: 0 !important;
+}
+
+/* 执行步骤条 */
+
+.step_model{
+    position: absolute;
+    background: #00000085;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.step-card{
+    width: 100%;
+    height: 80%;
+    max-width: 500px;
+    max-height: 700px;
+    margin: auto;
+}
+.el-step{
+    flex-basis: 13% !important;
+}
+.el-step__description{
+    padding-right:0 !important;
+}
+.is-process{
+    animation: progressload 5s infinite;
+}
+.el-message-box{
+    width: auto !important;
+}
+
+/* 其他 */
+
+.el-dialog{
+    min-width: 300px;
+    max-width: 350px;
+}
+.el-dialog__headerbtn{
+    right:0 !important;
+}
+.chatImage_preview{
+    position: fixed;
+    background: #00000073;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.chatImage_preview img{
+    width: auto;
+    height: auto;
+    max-width: 1000px;
+    max-height: 100%;
+    margin: auto;
+}
+@media only screen and (max-width: 1000px) {
+    .chatImage_preview img{
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .clearfix .el-icon-back{
+        display:inherit
+    }
+    .chat_view{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .list_menu{
+        width: 100%;
+        max-width: 100%;
+        border-right: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .clearfix .el-button{
+        display:inherit
+    }
+    .content_center{
+        position: absolute;
+        width: calc(100% - 2px);
+        height: calc(100% - 66px);
+    }
+    .content_left{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100px;
+    }
+}
+@media only screen and (max-width: 416px) {
+    .login_model{
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 128px);
+    }
+    .top_logo{
+        margin-top: auto;
+    }
+    .login_btn{
+        margin-bottom: auto !important;
+    }
+    .top_logo div{
+        font-size: 23px;
+    }
+    .top_logo img{
+        height: 30px;
+    }
+}
+
+@keyframes progressload
+{
+    0% {
+        color: #909399;
+        border-color:#909399;
+    }
+    25%   {color: #E6A23C;border-color:#E6A23C;}
+    50%  {color: #F56C6C;border-color:#F56C6C;}
+    75%  {color: #409EFF;border-color:#409EFF;}
+    100% {color: #909399;border-color:#909399;}
+}
+
+@-moz-keyframes progressload /* Firefox */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-webkit-keyframes progressload /* Safari 和 Chrome */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-o-keyframes progressload /* Opera */
+{
+from {background: red;}
+to {background: yellow;}
+}
